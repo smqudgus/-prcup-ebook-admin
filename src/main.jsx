@@ -149,6 +149,7 @@ function EbookViewer({ items }) {
                 <div className="flipbook-shell">
           {pageSheets.length ? (
             <HTMLFlipBook
+key={pageSheets.map((p) => p.id).join('-')}
               ref={bookRef}
               width={560}
               height={780}
