@@ -84,3 +84,58 @@ nav a.active { background: #1261d6; color: #fff; }
   .brand strong { font-size: 20px; }
   .zoom-head { flex-direction: column; align-items: flex-start; }
 }
+.viewer {
+  height: calc(100vh - 180px);
+  min-height: 720px;
+  overflow: visible;
+}
+
+.flipbook-shell {
+  height: 100%;
+  overflow: visible;
+}
+
+.sheet-card {
+  height: 100%;
+  overflow: hidden;
+}
+
+.sheet-media {
+  position: absolute;
+  inset: 48px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.sheet-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+}
+.sheet-toolbar {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  padding: 10px 14px;
+  background: #f6f9ff;
+  border-bottom: 1px solid #dce7f7;
+  z-index: 20;
+}
+
+.zoom-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #d6e5fa;
+  color: #1261d6;
+  font-size: 13px;
+  font-weight: 900;
+  z-index: 30;
+}
+
