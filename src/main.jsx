@@ -151,8 +151,8 @@ function EbookViewer({ items }) {
             <HTMLFlipBook
 key={pageSheets.map((p) => p.id).join('-')}
               ref={bookRef}
-              width={560}
-              height={780}
+              width={520}
+              height={735}
               size="stretch"
               minWidth={280}
               maxWidth={1200}

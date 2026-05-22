@@ -84,58 +84,124 @@ nav a.active { background: #1261d6; color: #fff; }
   .brand strong { font-size: 20px; }
   .zoom-head { flex-direction: column; align-items: flex-start; }
 }
+
+
+/* ===== E-Book 화면 크기 안정화 ===== */
+
+.viewer-wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.viewer-head {
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 30;
+}
+
 .viewer {
-  height: calc(100vh - 180px);
-  min-height: 720px;
-  overflow: visible;
+  position: relative;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 24px 28px 32px !important;
+  overflow: hidden !important;
 }
 
 .flipbook-shell {
-  height: 100%;
-  overflow: visible;
-}
-
-.sheet-card {
-  height: 100%;
-  overflow: hidden;
-}
-
-.sheet-media {
-  position: absolute;
-  inset: 48px 0 0 0;
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden !important;
+}
+
+.stf__parent {
+  max-width: 1080px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.stf__block {
+  box-shadow: 0 18px 50px rgba(28,60,120,.16) !important;
+}
+
+.flip-page-inner {
+  width: 100%;
+  height: 100%;
+  padding: 8px !important;
+  background: #eff4fb;
+}
+
+.sheet-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+  border-radius: 12px;
   background: #fff;
 }
 
-.sheet-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain !important;
-}
 .sheet-toolbar {
+  height: 44px !important;
+  min-height: 44px !important;
   display: flex !important;
   align-items: center;
   justify-content: space-between;
-  height: 48px;
-  padding: 10px 14px;
+  padding: 8px 12px !important;
   background: #f6f9ff;
   border-bottom: 1px solid #dce7f7;
+  position: relative;
   z-index: 20;
+}
+
+.sheet-media {
+  position: absolute !important;
+  inset: 44px 0 0 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  overflow: hidden !important;
+}
+
+.sheet-media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block;
+  background: #fff;
 }
 
 .zoom-btn {
   display: inline-flex !important;
   align-items: center;
   gap: 6px;
-  padding: 7px 12px;
+  padding: 6px 11px !important;
   border-radius: 999px;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #d6e5fa;
   color: #1261d6;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 900;
-  z-index: 30;
+  position: relative;
+  z-index: 40;
 }
 
+@media (max-height: 850px) {
+  .stf__parent {
+    transform: scale(0.9);
+    transform-origin: top center;
+    margin-bottom: -60px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .stf__parent {
+    transform: scale(0.88);
+    transform-origin: top center;
+    margin-bottom: -70px !important;
+  }
+}
